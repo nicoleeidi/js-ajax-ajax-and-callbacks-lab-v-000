@@ -25,6 +25,3 @@ var searchRepositories = () => {
       displayError()
     })
 }
-
-
-var renderSearchResults = (data) =>
