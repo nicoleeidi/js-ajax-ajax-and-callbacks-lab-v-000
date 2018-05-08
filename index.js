@@ -31,10 +31,10 @@ function showCommits(){
 
 }
 var renderCommit = (commit) => {
-  return `<li><h3>${commit.sha}</h3><p>${commit.commit.message}</p></li>`
+
 }
 
 var renderCommits = (data) => {
-  let result = data.map((commit)=>renderCommit(commit)).join('')
+  let result = data.map((commit)=>  return `<li><h3>${commit.sha}</h3><p>${commit.commit.message}</p></li>`).join('')
   return `<ul>${result}</ul>`
 }
