@@ -27,16 +27,14 @@ function searchRepositories(){
       displayError()
     })
 }
+function renderCommits(data){
+  let result = data.map((commit)=>  return `<li><h3>${commit.sha}</h3><p>${commit.commit.message}</p></li>`).join('')
+  return `<ul>${result}</ul>`
+}
 function showCommits(el){
   $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repository}/commits`, function(data) {
      $('#details').html(renderCommits(data))
    }).fail(error => {
      displayError()
    })
-}
-
-
-function renderCommits(data){
-  let result = data.map((commit)=>  return `<li><h3>${commit.sha}</h3><p>${commit.commit.message}</p></li>`).join('')
-  return `<ul>${result}</ul>`
 }
