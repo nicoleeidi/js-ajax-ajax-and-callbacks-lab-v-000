@@ -19,7 +19,6 @@ var searchRepositories = () => {
               <hr>
             `
         })
-
       )
       }).fail(error => {
       displayError()
