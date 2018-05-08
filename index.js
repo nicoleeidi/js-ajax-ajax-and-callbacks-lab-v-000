@@ -36,7 +36,7 @@ function showCommits(el){
 }
 
 
-var renderCommits = (data) => {
+function renderCommits(data){
   let result = data.map((commit)=>  return `<li><h3>${commit.sha}</h3><p>${commit.commit.message}</p></li>`).join('')
   return `<ul>${result}</ul>`
 }
