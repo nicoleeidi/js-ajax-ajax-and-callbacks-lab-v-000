@@ -27,7 +27,7 @@ function searchRepositories(){
       displayError()
     })
 }
-function showCommits(){
+function showCommits(el){
 
 }
 
