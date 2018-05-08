@@ -30,9 +30,7 @@ function searchRepositories(){
 function showCommits(){
 
 }
-var renderCommit = (commit) => {
 
-}
 
 var renderCommits = (data) => {
   let result = data.map((commit)=>  return `<li><h3>${commit.sha}</h3><p>${commit.commit.message}</p></li>`).join('')
