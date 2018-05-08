@@ -22,12 +22,12 @@ function searchRepositories(searchTerms){
             `
         })
       )
-      }).fail(error => {
+      }).fail(function(error) {
       displayError()
     })
 }
 function renderCommits(data){
-  let result = data.map((commit)=>  return `<li><h3>${commit.sha}</h3><p>${commit.commit.message}</p></li>`).join('')
+  let result = data.map((commit)=>  `<li><h3>${commit.sha}</h3><p>${commit.commit.message}</p></li>`).join('')
   return `<ul>${result}</ul>`
 }
 
