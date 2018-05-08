@@ -21,3 +21,12 @@ function showRepositories(event, data) {
   }).join('') + "</ul>"
   document.getElementById("repositories").innerHTML = repoList
 }
+
+var searchRepositories = () => {
+  const searchTerms = $('#searchTerms').val()
+  $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, data => {
+      $('#results').html(renderSearchResults(data))
+    }).fail(error => {
+      displayError()
+    })
+}
