@@ -17,7 +17,9 @@ var searchRepositories = () => {
     })
 }
 //replace s
-var renderSearchResult = (result) => {
+var renderSearchResult = (result) =>
+
+var renderSearchResults = (data) => data.items.map( result => {
   return `
       <div>
         <h2><a href="${result.html_url}">${result.name}</a></h2>
@@ -26,6 +28,4 @@ var renderSearchResult = (result) => {
       </div>
       <hr>
     `
-}
-
-var renderSearchResults = (data) => data.items.map( result => renderSearchResult(result))
+})
